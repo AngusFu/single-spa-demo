@@ -3,8 +3,6 @@ import VueRouter from 'vue-router'
 import singleSpaVue from 'single-spa-vue'
 import App from './App.vue'
 
-Vue.use(VueRouter)
-
 const router = new VueRouter({
   base: 'app1',
   mode: 'history',

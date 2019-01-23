@@ -1,6 +1,11 @@
 <template>
   <div id="wrapper">
-    <HelloWorld /> <a href="/app1">APP1</a> <a href="/app2">APP2</a>
+    <div @click="goToApp('/app1')">APP1</div>
+    <div @click="goToApp('/app1/foo')">APP1/foo</div>
+    <div @click="goToApp('/app1/bar')">APP1/bar</div>
+    <div @click="goToApp('/app2')">APP2</div>
+    <div @click="goToApp('/app2/foo')">APP2/foo</div>
+    <div @click="goToApp('/app2/bar')">APP2/bar</div>
   </div>
 </template>
 
@@ -11,17 +16,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    goToApp(path) {
+      window.singleSpaNavigate(path)
+    }
   }
 }
 </script>
-
-<style>
-#wrapper {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
