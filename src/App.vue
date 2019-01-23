@@ -1,5 +1,7 @@
 <template>
-  <div id="app"><img width="25%" src="./assets/logo.png" /> <HelloWorld /></div>
+  <div id="wrapper">
+    <HelloWorld /> <a href="/app1">APP1</a> <a href="/app2">APP2</a>
+  </div>
 </template>
 
 <script>
@@ -14,7 +16,7 @@ export default {
 </script>
 
 <style>
-#app {
+#wrapper {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
